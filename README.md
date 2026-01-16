@@ -27,6 +27,6 @@ This repository implements a real-time "Invisibility Cloak" effect using Python 
     pip install opencv-python numpy
 
 
-**How to Run**
+4. **How to Run**
     ```bash
     python src/advanced_cloak.py
