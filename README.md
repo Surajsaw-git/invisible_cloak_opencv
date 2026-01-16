@@ -1,19 +1,32 @@
-# invisible_cloak_opencv
-This repository implements a real-time "Invisibility Cloak" effect using OpenCV and Python. By capturing a background frame and using HSV color segmentation, it identifies a specific colored cloth and replaces it with the background. It utilizes morphological transformations and bitwise operations to create a seamless magical effect.
+# Invisible Cloak with OpenCV
 
-The project utilizes color-based segmentation (specifically in the HSV color space) to detect a specific color of fabric, such as a red or blue cloth, and replaces it in real-time with a pre-captured background image [1].
+This repository implements a real-time "Invisibility Cloak" effect using Python and OpenCV. By capturing a background frame and using HSV color segmentation, it identifies a specific colored cloth (like green or red) and replaces it with the background in real-time.
 
-Key Features
-Real-time Image Processing: Uses cv2.VideoCapture to process live webcam feeds.
-Color Detection & Masking: Employs thresholding to create a binary mask of the cloak.
-Morphological Operations: Includes cv2.dilate and cv2.morphologyEx to remove noise and smooth the edges of the cloak [2].
-Bitwise Operations: Combines the background and current frame using cv2.bitwise_and and cv2.bitwise_or to create the final invisibility effect.
 
-Getting Started
-To run this project, you can install the necessary dependencies via OpenCV's official documentation:
 
-pip install opencv-python numpy
+## Features
+* **Real-time Processing:** Uses `cv2.VideoCapture` for live webcam interaction.
+* **Color Detection:** Employs HSV thresholding for precise color masking.
+* **Noise Reduction:** Uses morphological operations (dilation) to smooth the cloak edges.
+* **Dynamic Background:** Supports static images or pre-captured background frames.
 
-Citations:
-[1] OpenCV Image Processing Tutorials
-[2] Morphological Transformations Documentation
+## Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Surajsaw-git/invisible_cloak_opencv.git](https://github.com/Surajsaw-git/invisible_cloak_opencv.git)
+   cd invisible_cloak_opencv
+
+2. **Create a virtual environment:**
+    ```bash
+    python -m venv venv
+    source venv/Scripts/activate  # For Windows
+
+3. **Install dependencies:**
+    ```bash
+    pip install opencv-python numpy
+
+
+**How to Run**
+    ```bash
+    python src/advanced_cloak.py
